@@ -7,7 +7,7 @@ import androidx.compose.ui.tooling.preview.Preview
 //Composable for wellnessScreen
 @Composable
 fun WellnessScreen(modifier: Modifier = Modifier) {
-    WaterCounter(modifier)
+    StatefullWaterCounter(modifier)
 }
 
 //Preview of WellnessScreen

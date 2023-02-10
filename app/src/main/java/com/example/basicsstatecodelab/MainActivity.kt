@@ -26,7 +26,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-
+//preview of defaul app screen
 @Preview(showBackground = true)
 @Composable
 fun MyAppPreview(){

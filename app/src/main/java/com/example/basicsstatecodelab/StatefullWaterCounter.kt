@@ -13,35 +13,35 @@ import androidx.compose.ui.unit.dp
 
 // composable for water-counter
 @Composable
-fun WaterCounter(modifier: Modifier = Modifier) {
+fun StatefullWaterCounter(modifier: Modifier = Modifier) {
 
-    Column(modifier = modifier.padding(16.dp))
-    {
-        var count by rememberSaveable { mutableStateOf(0) }
+    var waterCount by rememberSaveable { mutableStateOf(0) }
+    StatelessWaterCounter(count = waterCount, onIncrement = { waterCount++ }, modifier)
+
+}
+
+@Composable
+fun StatelessWaterCounter(count: Int, onIncrement: () -> Unit, modifier: Modifier = Modifier) {
+    Column(modifier = modifier.padding(16.dp)) {
 
         if (count > 0) {
-
             //text for showing number of waterCounter
-            Text(
-                text = "you've  had $count glasses.",
-            )
+            Text( text = "you've  had $count glasses." )
         }
 
         //button for increasing glass
         Button(
-            onClick = { count++ },
+            onClick = onIncrement,
             enabled = (count < 10),
             modifier = Modifier.padding(top = 8.dp)
         ) {
             Text(text = "Add one")
         }
     }
-
-
 }
 
 @Preview(showBackground = true)
 @Composable
 fun WaterCounterPreview() {
-    WaterCounter()
+    StatefullWaterCounter()
 }
