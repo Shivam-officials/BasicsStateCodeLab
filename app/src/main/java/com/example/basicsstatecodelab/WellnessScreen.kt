@@ -1,5 +1,6 @@
 package com.example.basicsstatecodelab
 
+import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -7,7 +8,10 @@ import androidx.compose.ui.tooling.preview.Preview
 //Composable for wellnessScreen
 @Composable
 fun WellnessScreen(modifier: Modifier = Modifier) {
-    StatefullWaterCounter(modifier)
+    Column(modifier = modifier) {
+        StatefullWaterCounter()
+        WellnessTaskList()
+    }
 }
 
 //Preview of WellnessScreen
@@ -15,4 +19,7 @@ fun WellnessScreen(modifier: Modifier = Modifier) {
 @Composable
 fun WellnessScreenPreview() {
     WellnessScreen()
+
 }
+
+
