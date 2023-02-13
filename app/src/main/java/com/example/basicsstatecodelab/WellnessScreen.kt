@@ -10,12 +10,15 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 @Composable
 fun WellnessScreen(
     modifier: Modifier = Modifier,
-    wellnessViewModel: WellnessViewModel = viewModel()
-    ) {
+    wellnessViewModel: WellnessViewModel = viewModel(),
+) {
     Column(modifier = modifier) {
         StatefullWaterCounter()
 
-        WellnessTaskList(List = wellnessViewModel.tasks, onCloseTask = {task -> wellnessViewModel.remove(task)} )
+        WellnessTaskList(
+            List = wellnessViewModel.tasks,
+            onCloseTask = { task -> wellnessViewModel.remove(task) },
+            onCheckedTask = { task, checked -> wellnessViewModel.changeTaskChecked(task, checked) })
     }
 }
 
