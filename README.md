@@ -7,8 +7,8 @@ The app has two main functionalities:
  * A list of wellness tasks to do throughout the day.
 
 ## ScreenShots
-<img src = "Screenshots/wellnes button.gif" >
-<img src = "Screenshots/wellness\ App.gif ">
+<img src = "Screenshots/wellnessButton.gif" alt = "app Button functionality preview" >
+<img src = "Screenshots/WellnessApp.gif " alt = ""app task list functionality>
 
 ## What I learnt 
 
