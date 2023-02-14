@@ -8,7 +8,7 @@ The app has two main functionalities:
 
 ## ScreenShots
 <img src = "Screenshots/wellnessButton.gif" alt = "app Button functionality preview" >
-<img src = "Screenshots/WellnessApp.gif " alt = ""app task list functionality>
+<img src = "Screenshots/WellnessApp.gif " alt = "app task list functionality">
 
 ## What I learnt 
 
